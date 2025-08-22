@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Bài 3 - 22/8/2025</title>
+    </head>
+    <body>
+        <marquee behavior="" direction="">
+            <img width="150" src="../bai2/review__avt-03.png" alt="" />
+        </marquee>
+        <h1>FORM điền thông tin</h1>
+
+        <form action="">
+            <div>
+                <p>
+                    <b>Họ và tên: </b>
+                </p>
+                <input
+                    type="text"
+                    name="name"
+                    id=""
+                    placeholder="Điền họ và tên..."
+                />
+            </div>
+
+            <div>
+                <p>
+                    <b>Mã số sinh viên: </b>
+                </p>
+                <!-- att readonly: chỉ đọc -->
+                <input
+                    type="text"
+                    name="mssv"
+                    id=""
+                    placeholder="Điền MSSV..."
+                    value="2321050038"
+                    readonly
+                />
+            </div>
+            <div>
+                <p>
+                    <b>Giới thiệu bản thân: </b>
+                </p>
+                <textarea name="introduce" id="">Nhập giới thiệu...</textarea>
+            </div>
+            <div>
+                <p>
+                    <b>Nhập email: </b>
+                </p>
+                <input type="email" name="email" placeholder="Nhập email..." />
+            </div>
+            <div>
+                <p>
+                    <b>Nhập SĐT: </b>
+                </p>
+                <input
+                    type="tel"
+                    name="tel"
+                    placeholder="Nhập sđt..."
+                    required
+                    pattern="(([0]{1})([3,4 9]{1})([0-9]{8}))"
+                />
+            </div>
+            <div>
+                <p><b>Giới tính: </b></p>
+                <input type="radio" name="gender" value="male" />
+                <span>Nam</span>
+                <input type="radio" name="gender" value="female" />
+                <span>Nữ</span>
+            </div>
+
+            <div>
+                <p><b>Sở thích: </b></p>
+                <input type="checkbox" name="hobby" value="game" />
+                <span>Game</span> <br />
+                <input type="checkbox" name="hobby" value="film" />
+                <span>Film</span> <br />
+                <input type="checkbox" name="hobby" value="sport" />
+                <span>Sport</span> <br />
+                <input type="checkbox" name="hobby" value="music" />
+                <span>Music</span> <br />
+            </div>
+
+            <div>
+                <p><b>Danh sách trình duyệt Web</b></p>
+                <select name="browsers">
+                    <option value="g">g</option>
+                    <option value="h">h</option>
+                    <option value="j">k</option>
+                    <option value="k">j</option>
+                    <option value="l">g</option>
+                    <option value=";">g</option>
+                </select>
+            </div>
+
+            <div>0 <input type="range" name="" id="" /> 100</div>
+
+            <div>
+                <p><b>TUổi: </b></p>
+                <input type="number" name="age" step="2" id="" />
+            </div>
+
+            <div>
+                <p><b>Ngày tháng năm sinh: </b></p>
+                <input type="date" name="date" step="2" id="" />
+            </div>
+
+            <div>
+                <p><b>CHọn màu sắc: </b></p>
+                <input type="color" name="color" id="" />
+            </div>
+
+            <div>
+                <p><b>Mật khẩu: </b></p>
+                <input type="password" name="password" id="" />
+            </div>
+            <div>
+                <input type="submit" value="submit" />
+            </div>
+        </form>
+        <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/NYgDdHOPxUM?si=C25DjZc9JA23fK3C"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+        ></iframe>
+
+        <audio src=""></audio>
+        <video src="" controls></video>
+    </body>
+</html>
