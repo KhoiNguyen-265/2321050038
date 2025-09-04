@@ -69,6 +69,23 @@ input {
     overflow: hidden;
 }
 
+.slideon-prev,
+.slideon-next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    font-weight: 800;
+    opacity: 0.5;
+}
+
+.slideon-prev:hover,
+.slideon-next:hover {
+    opacity: 1;
+}
+
 /* -------------- Header -------------- */
 
 /* navbar */
