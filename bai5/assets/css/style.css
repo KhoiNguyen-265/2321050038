@@ -101,7 +101,6 @@ input {
 /* MAIN */
 
 main {
-    height: 10000px;
     background: #f1f1f2;
 }
 
@@ -161,15 +160,21 @@ main {
     padding-left: 20px;
 }
 
-.news-item__list {
+.news-item ul {
+    list-style: square;
+    list-style-position: outside;
+    padding-left: 20px;
+}
+
+.item__list {
     margin-top: 10px;
 }
 
-.news-item__list::marker {
+.item__list::marker {
     color: #0f75bc;
 }
 
-.news-item__desc {
+.item__desc {
     color: #333;
     font-size: 1.3rem;
     line-height: 1.3;
@@ -332,4 +337,118 @@ main {
     color: #333;
     font-size: 1.5rem;
     line-height: 1.3;
+}
+
+.action {
+    background-color: #fff;
+    padding: 20px 0;
+}
+
+.action__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #c9cacc;
+}
+
+.partner {
+    background-color: #fff;
+    padding: 20px 0;
+}
+
+.partner__header {
+    border-bottom: 1px solid #c9cacc;
+}
+
+.partner__img-wrapper {
+    display: flex;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.partner__img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* Video */
+.video__inner {
+    display: flex;
+    background: black;
+    /* padding: 10px; */
+}
+
+.video__media {
+    border-right: 1px dotted #939597;
+}
+
+iframe {
+    display: block;
+    margin: 0 auto;
+}
+
+.video__title {
+    color: #fff;
+    line-height: 1.3;
+    padding: 10px;
+    border-bottom: 1px dotted #939597;
+}
+
+.video__list {
+    padding: 30px 0 0 30px;
+}
+
+.video__list li {
+    border-bottom: 1px dotted #939597;
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+}
+
+.video__link {
+    color: #fff;
+    font-size: 1.7rem;
+}
+
+/* FOOTER */
+.footer {
+    background: #0c4da2;
+}
+
+.footer__inner {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px 0 60px;
+}
+
+.footer__title {
+    font-size: 2rem;
+    color: #fff;
+}
+
+.footer__desc {
+    margin-top: 10px;
+    color: #fff;
+}
+
+.footer__right {
+    margin-left: 40px;
+}
+
+.footer-right__top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.separate {
+    margin-top: 30px;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+}
+
+.footer-right__bottom {
+    margin-top: 30px;
+    text-align: right;
 }
