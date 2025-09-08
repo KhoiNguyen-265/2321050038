@@ -68,6 +68,10 @@ input {
     object-fit: cover;
 }
 
+.header__top {
+    position: relative;
+}
+
 .navbar {
     background: #0c4ca3;
 }
@@ -96,6 +100,44 @@ input {
 
 .navbar__link--active {
     background-color: var(--primary-color);
+}
+
+/* Form */
+.form {
+    position: absolute;
+    top: 12px;
+    right: 12%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.form__sign {
+    display: flex;
+    gap: 5px;
+    color: #0b4da3;
+    font-weight: 700;
+}
+
+.form__search {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.form__input {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 4px 10px;
+    font-size: 1.3rem;
+}
+
+.form-search__icon {
+    scale: 0.8;
+    position: absolute;
+    right: 5px;
+    color: #333;
 }
 
 /* MAIN */

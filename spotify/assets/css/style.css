@@ -1,0 +1,86 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #000;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: "Roboto", sans-serif;
+}
+
+/* Common */
+button,
+textarea,
+select,
+input {
+    color: inherit;
+    font-size: inherit;
+}
+
+button,
+input {
+    outline: none;
+    border: none;
+    background: transparent;
+}
+
+.container {
+    width: 1170px;
+    max-width: calc(100%-48px);
+    margin: 0 auto;
+}
+
+/* HEADER */
+.header {
+    background-color: var(--bg-color);
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__control {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.menu-dots i {
+    color: #fff;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+.home-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #1f1f1f;
+}
+
+.home-wrapper i {
+    color: #676767;
+}
