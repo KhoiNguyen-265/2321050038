@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>TikTok Clone</title>
+
+        <!-- Reset CSS -->
+        <link rel="stylesheet" href="./assets/css/reset.css" />
+
+        <!-- Embed Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Font awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        />
+
+        <!-- Style CSS -->
+        <link rel="stylesheet" href="./assets/css/style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- Logo -->
+                <a href="#!" class="logo">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        viewBox="0 0 118 30"
+                        alt="TikTok"
+                        height="42"
+                        width="118"
+                        class="css-1pylepm-5e6d46e3--StyledLogoDark e1487oh22"
+                    >
+                        <path
+                            fill="#25F4EE"
+                            d="M9.875 11.842v-1.119A9 9 0 0 0 8.7 10.64c-4.797-.006-8.7 3.9-8.7 8.708a8.7 8.7 0 0 0 3.718 7.134A8.68 8.68 0 0 1 1.38 20.55c0-4.737 3.794-8.598 8.495-8.707"
+                        ></path>
+                        <path
+                            fill="#25F4EE"
+                            d="M10.087 24.526c2.14 0 3.89-1.707 3.966-3.83l.007-18.968h3.462a7 7 0 0 1-.109-1.202h-4.727l-.006 18.968a3.98 3.98 0 0 1-3.967 3.83 3.9 3.9 0 0 1-1.846-.46 3.95 3.95 0 0 0 3.22 1.662m13.905-16.36V7.111a6.5 6.5 0 0 1-3.584-1.067 6.57 6.57 0 0 0 3.584 2.122"
+                        ></path>
+                        <path
+                            fill="#FE2C55"
+                            d="M20.41 6.044a6.54 6.54 0 0 1-1.617-4.316h-1.265a6.56 6.56 0 0 0 2.881 4.316M8.707 15.365a3.98 3.98 0 0 0-3.974 3.976c0 1.528.87 2.858 2.134 3.523a3.94 3.94 0 0 1-.754-2.321 3.98 3.98 0 0 1 3.973-3.976c.41 0 .805.07 1.176.185v-4.833a9 9 0 0 0-1.176-.083c-.07 0-.134.006-.204.006v3.708a4 4 0 0 0-1.175-.185"
+                        ></path>
+                        <path
+                            fill="#FE2C55"
+                            d="M23.992 8.166v3.676a11.25 11.25 0 0 1-6.579-2.116v9.622c0 4.8-3.903 8.713-8.706 8.713a8.67 8.67 0 0 1-4.99-1.579 8.7 8.7 0 0 0 6.37 2.781c4.797 0 8.706-3.906 8.706-8.714v-9.621a11.25 11.25 0 0 0 6.579 2.116v-4.73q-.718-.002-1.38-.148"
+                        ></path>
+                        <path
+                            fill="#fff"
+                            d="M17.413 19.348V9.726a11.25 11.25 0 0 0 6.58 2.116V8.166a6.57 6.57 0 0 1-3.584-2.122 6.6 6.6 0 0 1-2.887-4.316h-3.463l-.006 18.968a3.98 3.98 0 0 1-3.967 3.83 3.99 3.99 0 0 1-3.225-1.656 3.99 3.99 0 0 1-2.134-3.523A3.98 3.98 0 0 1 8.7 15.372c.409 0 .805.07 1.176.185v-3.708c-4.702.103-8.496 3.964-8.496 8.701 0 2.29.888 4.373 2.338 5.933a8.67 8.67 0 0 0 4.989 1.58c4.797 0 8.706-3.913 8.706-8.715M30.048 8.179h14.775l-1.355 4.232h-3.832v15.644h-4.778V12.41l-4.804.006zm38.984 0h15.12l-1.354 4.232h-4.172v15.644h-4.784V12.41l-4.803.006zM45.73 14.502h4.733v13.553h-4.708zm6.617-6.374h4.733v9.257l4.689-4.61h5.647l-5.934 5.76 6.643 9.52h-5.213l-4.433-6.598-1.405 1.362v5.236h-4.733V8.128zm50.143 0h4.734v9.257l4.688-4.61h5.647l-5.934 5.76 6.643 9.52h-5.206l-4.433-6.598-1.405 1.362v5.236h-4.734zm-54.396 4.826a2.384 2.384 0 1 0-.002-4.771 2.384 2.384 0 0 0 .002 4.771"
+                        ></path>
+                        <path
+                            fill="#25F4EE"
+                            d="M83.545 19.942a8.11 8.11 0 0 1 7.473-8.087 9 9 0 0 0-.709-.026c-4.478 0-8.106 3.631-8.106 8.113s3.628 8.113 8.106 8.113c.21 0 .498-.013.71-.026-4.178-.326-7.475-3.823-7.475-8.087"
+                        ></path>
+                        <path
+                            fill="#FE2C55"
+                            d="M92.858 11.83c-.217 0-.505.012-.715.025a8.11 8.11 0 0 1 7.467 8.087 8.11 8.11 0 0 1-7.467 8.087c.21.02.498.026.715.026 4.478 0 8.106-3.631 8.106-8.113s-3.628-8.113-8.106-8.113"
+                        ></path>
+                        <path
+                            fill="#fff"
+                            d="M91.58 23.887a3.94 3.94 0 0 1-3.94-3.945 3.94 3.94 0 1 1 7.882 0c0 2.18-1.77 3.945-3.941 3.945m0-12.058c-4.477 0-8.105 3.631-8.105 8.113s3.628 8.113 8.106 8.113 8.106-3.631 8.106-8.113-3.629-8.113-8.106-8.113"
+                        ></path>
+                    </svg>
+                </a>
+                <!-- Form -->
+                <form action="" class="form">
+                    <div class="form-search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input
+                            type="text"
+                            name=""
+                            id=""
+                            class="form-search__input"
+                            placeholder="Tìm kiếm..."
+                        />
+                    </div>
+                </form>
+                <!-- Navigation -->
+                <nav class="navbar">
+                    <ul class="navbar__list">
+                        <li class="navbar__item navbar__item--active">
+                            <i class="fa-solid fa-house"></i>
+                            <a href="#!" class="navbar__link">Đề xuất</a>
+                        </li>
+                        <li class="navbar__item">
+                            <i class="fa-solid fa-anchor"></i>
+                            <a href="#!" class="navbar__link">Khám phá</a>
+                        </li>
+                        <li class="navbar__item">
+                            <i class="fa-solid fa-user-plus"></i>
+                            <a href="#!" class="navbar__link">Đã follow</a>
+                        </li>
+                        <li class="navbar__item">
+                            <i class="fa-solid fa-tv"></i>
+                            <a href="#!" class="navbar__link">LIVE</a>
+                        </li>
+                        <li class="navbar__item">
+                            <i class="fa-solid fa-download"></i>
+                            <a href="#!" class="navbar__link">Tải lên</a>
+                        </li>
+                        <li class="navbar__item">
+                            <i class="fa-solid fa-user"></i>
+                            <a href="#!" class="navbar__link">Hồ sơ</a>
+                        </li>
+                        <li class="navbar__item">
+                            <i class="fa-solid fa-ellipsis"></i>
+                            <a href="#!" class="navbar__link">Thêm</a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- Action -->
+                <div class="action">
+                    <button class="btn sidebar__btn">Đăng nhập</button>
+                </div>
+                <!-- Footer -->
+                <div class="footer">
+                    <div class="footer__inner">
+                        <a href="#!">
+                            <p class="footer__desc">Công ty</p>
+                        </a>
+                        <a href="#!">
+                            <p class="footer__desc">Chương trình</p>
+                        </a>
+                        <a href="#!">
+                            <p class="footer__desc">Điều khoản và chính sách</p>
+                        </a>
+                        <a href="#!">
+                            <p class="footer__desc">© 2025 TikTok</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main -->
+            <main class="main">
+                <div class="content">
+                    <blockquote
+                        class="tiktok-embed"
+                        cite="https://www.tiktok.com/@guria.keria/video/7382975669090716948"
+                        data-video-id="7382975669090716948"
+                        style="max-width: 605px; min-width: 325px"
+                    >
+                        <section>
+                            <a
+                                target="_blank"
+                                title="@guria.keria"
+                                href="https://www.tiktok.com/@guria.keria?refer=embed"
+                                >@guria.keria</a
+                            >
+                            FAKER - HALL OF LEGENDS [ ONLY &#38; ONE - Một cột
+                            mốc mới nữa trong sự nghiệp huy hoàng của cậu, đắng
+                            cay ngọt bùi cậu đều đã trải qua, thành quả này
+                            chính là thứ mà cậu xứng đáng được nhận lấy. Không
+                            phải cậu thì không thể là ai khác - FAKER!]
+                            <a
+                                title="faker"
+                                target="_blank"
+                                href="https://www.tiktok.com/tag/faker?refer=embed"
+                                >#faker</a
+                            >
+                            <a
+                                title="t1"
+                                target="_blank"
+                                href="https://www.tiktok.com/tag/t1?refer=embed"
+                                >#t1</a
+                            >
+                            <a
+                                title="t1win"
+                                target="_blank"
+                                href="https://www.tiktok.com/tag/t1win?refer=embed"
+                                >#t1win</a
+                            >
+                            <a
+                                title="holfakerlmht"
+                                target="_blank"
+                                href="https://www.tiktok.com/tag/holfakerlmht?refer=embed"
+                                >#holfakerlmht</a
+                            >
+                            <a
+                                target="_blank"
+                                title="♬ nhạc nền  - 𝙂𝙐𝙍𝙄𝘼"
+                                href="https://www.tiktok.com/music/nhạc-nền-𝙂𝙐𝙍𝙄𝘼-7382975713638370065?refer=embed"
+                                >♬ nhạc nền - 𝙂𝙐𝙍𝙄𝘼</a
+                            >
+                        </section>
+                    </blockquote>
+                    <script
+                        async
+                        src="https://www.tiktok.com/embed.js"
+                    ></script>
+                    <div class="category">
+                        <div class="icon-wrapper">
+                            <p>K</p>
+                        </div>
+                        <div class="icon-wrapper">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <div class="icon-wrapper">
+                            <i class="fa-solid fa-comment-dots"></i>
+                        </div>
+                        <div class="icon-wrapper">
+                            <i class="fa-solid fa-bookmark"></i>
+                        </div>
+                        <div class="icon-wrapper">
+                            <i class="fa-solid fa-share"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cta">
+                    <div class="cta__left">
+                        <div class="cta-wrapper">
+                            <i class="fa-solid fa-phone"></i>
+                            <p class="cta__desc">Nhận xu</p>
+                        </div>
+                        <div class="cta-wrapper">
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+                            <p class="cta__desc">Tải ứng dụng</p>
+                        </div>
+                        <div class="cta-wrapper">
+                            <i class="fa-solid fa-download"></i>
+                            <p class="cta__desc">Ứng dụng</p>
+                        </div>
+                    </div>
+                    <div class="cta__right">
+                        <button class="btn cta__btn">Đăng nhập</button>
+                    </div>
+                </div>
+
+                <div class="controls">
+                    <div class="control-wrapper">
+                        <i class="fa-solid fa-angle-up"></i>
+                    </div>
+                    <div class="control-wrapper">
+                        <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </body>
+</html>
