@@ -1,0 +1,9 @@
+{
+    "scripts": {
+        "dev": "npx @tailwindcss/cli -i ./fpt-play/src/input.css -o ./fpt-play/src/output.css --watch"
+    },
+    "dependencies": {
+        "@tailwindcss/cli": "^4.1.13",
+        "tailwindcss": "^4.1.13"
+    }
+}
