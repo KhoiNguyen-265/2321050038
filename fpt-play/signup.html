@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sign Up</title>
+
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            button,
+            select {
+                background: transparent;
+            }
+
+            body {
+                margin: 0;
+                padding: 0;
+                background: #ccc;
+            }
+
+            .heading {
+                margin-top: 30px;
+                margin-bottom: 30px;
+                color: blue;
+            }
+
+            .container {
+                width: 30%;
+                margin: 0 auto;
+                text-align: center;
+                padding-bottom: 60px;
+            }
+
+            .header {
+                padding: 8px 0;
+                border-bottom: 1px solid #ccc;
+            }
+
+            .main-content {
+                padding: 20px 0;
+                background: #fff;
+                border-radius: 6px;
+            }
+
+            .desc {
+                margin-top: 10px;
+                margin-bottom: 8px;
+            }
+
+            .form {
+                width: 90%;
+                margin: 15px auto 0;
+            }
+
+            .input {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+            }
+            .input input {
+                width: 100%;
+                flex-grow: 1;
+                padding: 8px;
+                border-radius: 4px;
+                outline: none;
+                border: 1px solid #ccc;
+            }
+
+            .birth {
+                margin-top: 8px;
+            }
+
+            .birth__title {
+                margin: 8px 0;
+                text-align: left;
+            }
+
+            .birth__row {
+                display: flex;
+                gap: 8px;
+            }
+            select {
+                width: 100%;
+                flex-grow: 1;
+                padding: 8px;
+                border-radius: 4px;
+                outline: none;
+                border: 1px solid #ccc;
+            }
+
+            .gender {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                align-items: center;
+                padding: 8px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+
+            .form__input input {
+                margin-top: 8px;
+                width: 100%;
+                padding: 8px;
+                border-radius: 4px;
+                outline: none;
+                border: 1px solid #ccc;
+            }
+
+            .form__desc {
+                margin-top: 8px;
+                text-align: left;
+            }
+
+            .btn {
+                display: inline-block;
+                background: green;
+                color: #fff;
+                padding: 12px;
+                border: none;
+                width: 160px;
+                border-radius: 8px;
+            }
+
+            .link {
+                display: inline-block;
+                margin-top: 20px;
+                text-decoration: none;
+            }
+
+            footer {
+                background: #fff;
+            }
+
+            .footer__inner {
+                width: 1170px;
+                margin: 0 auto;
+                padding: 30px 0;
+            }
+            .footer__list {
+                list-style: none;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+            a {
+                text-decoration: none;
+            }
+
+            .separate {
+                margin: 10px 0;
+                height: 1px;
+                width: 100%;
+                background: #ccc;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="heading">Facebook</h1>
+            <div class="main-content">
+                <div class="header">
+                    <h2 class="title">Create a new account</h2>
+                    <p class="desc">It's quick and easy</p>
+                </div>
+                <form action="" class="form">
+                    <div class="input">
+                        <input placeholder="First name" type="text" />
+                        <input placeholder="Surname" type="text" />
+                    </div>
+                    <div class="birth">
+                        <p class="birth__title">Date of birth</p>
+                        <div class="birth__row">
+                            <select id="day" name="day">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="31">31</option>
+                            </select>
+
+                            <select id="month" name="month">
+                                <option value="Jan">Jan</option>
+                                <option value="Feb">Feb</option>
+                                <option value="Dec">Dec</option>
+                            </select>
+
+                            <select id="year" name="year">
+                                <option value="2025">2025</option>
+                                <option value="2024">2024</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="birth">
+                        <p class="birth__title">Gender</p>
+                        <div class="birth__row">
+                            <div class="gender">
+                                <span>Female</span>
+                                <input type="radio" name="gender" id="" />
+                            </div>
+                            <div class="gender">
+                                <span>Male</span>
+                                <input type="radio" name="gender" id="" />
+                            </div>
+                            <div class="gender">
+                                <span>Custom</span>
+                                <input type="radio" name="gender" id="" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form__input">
+                        <input
+                            type="text"
+                            placeholder="Mobile number or email address"
+                        />
+                    </div>
+                    <div class="form__input">
+                        <input type="password" placeholder="New password" />
+                    </div>
+                    <p class="form__desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Autem, ipsum!
+                    </p>
+                    <p class="form__desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Autem, ipsum!
+                    </p>
+                    <div><button class="btn">Sign up</button></div>
+                    <a href="#!" class="link">Already have an account</a>
+                </form>
+            </div>
+        </div>
+        <footer>
+            <div class="footer__inner">
+                <div class="footer-top">
+                    <ul class="footer__list">
+                        <li>
+                            <a href="#!" class="footer__link">Tiếng việt</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="footer__link">Tiếng việt</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="footer__link">Tiếng việt</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="footer__link">Tiếng việt</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="footer__link">Tiếng việt</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="footer__link">Tiếng việt</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="separate"></div>
+                <div class="footer-top">
+                    <ul class="footer__list">
+                        <li>
+                            <a href="#!" class="footer__link">Tiếng việt</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="footer__link">Tiếng việt</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="footer__link">Tiếng việt</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="footer__link">Tiếng việt</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="footer__link">Tiếng việt</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="footer__link">Tiếng việt</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
