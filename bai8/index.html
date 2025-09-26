@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Bài kiểm tra buổi 7</title>
+    </head>
+    <body>
+        <script>
+            const orderInfo = {
+                idOrder: "1",
+                guestInfo: {
+                    name: "Nguyễn Tiến Khởi",
+                    phoneNumber: "0387067695",
+                    regular: true,
+                },
+                listProducts: [
+                    {
+                        id: "coffee",
+                        name: "cà phê",
+                        quantity: 10,
+                        prices: 10000,
+                    },
+                    {
+                        id: "matCha",
+                        name: "matCha",
+                        quantity: 20,
+                        prices: 20000,
+                    },
+                    {
+                        id: "traSua",
+                        name: "trà sữa",
+                        quantity: 30,
+                        prices: 30000,
+                    },
+                ],
+
+                statusPay: true,
+                address: "Đan Phượng - Hà Nội",
+            };
+
+            const sumPrices = orderInfo.listProducts.map(
+                (product) => product.quantity * product.prices
+            );
+
+            const sumPriceOrder = sumPrices.reduce(
+                (sum, product) => sum + product,
+                0
+            );
+
+            document.writeln("Tổng tiền: " + sumPriceOrder + "<br>");
+
+            //String
+            const name = "Nguyễn Tiến Khởi";
+            document.writeln(name.length);
+        </script>
+    </body>
+</html>
