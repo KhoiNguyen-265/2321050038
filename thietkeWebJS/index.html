@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Bài 9 29/9/2025</title>
+    </head>
+    <body>
+        <!-- Bài 1 -->
+        <!-- <form action="">
+            <label for="name">Nhập tên:</label>
+            <input type="text" id="name" />
+            <button onclick="sayHello()">Click</button>
+        </form> -->
+
+        <!-- Bài 2 -->
+        <input type="number" name="" id="number1" />
+        <input type="number" name="" id="number2" />
+        <button onclick="addition()">Cộng</button>
+        <button onclick="subtraction()">Trừ</button>
+        <button onclick="multiplication()">Nhân</button>
+        <button onclick="division()">Chia</button>
+        <script>
+            // Bài 1
+            /*
+            const inputName = document.getElementById("name");
+            function sayHello() {
+                const name = inputName.value;
+                if (name.trim()) {
+                    document.writeln("Xin chào " + name);
+                } else {
+                    document.writeln("Vui lòng nhập tên!");
+                }
+            }
+            */
+
+            // Bài 2
+            const number1 = document.getElementById("number1");
+            const number2 = document.getElementById("number2");
+            function addition() {
+                if (!number1.value.trim() || !number2.value.trim()) {
+                    return document.writeln("Please enter value!");
+                }
+                document.writeln(+number1.value + +number2.value);
+            }
+
+            function subtraction() {
+                if (!number1.value.trim() || !number2.value.trim()) {
+                    return document.writeln("Please enter value!");
+                }
+                document.writeln(+number1.value - +number2.value);
+            }
+
+            function multiplication() {
+                if (!number1.value.trim() || !number2.value.trim()) {
+                    return document.writeln("Please enter value!");
+                }
+                document.writeln(+number1.value * +number2.value);
+            }
+
+            function division() {
+                if (!number1.value.trim() || !number2.value.trim()) {
+                    return document.writeln("Please enter value!");
+                }
+                if (+number2.value === 0) {
+                    return document.writeln("Cannot divide by 0!");
+                }
+                document.writeln(+number1.value / +number2.value);
+            }
+        </script>
+    </body>
+</html>

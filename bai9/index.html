@@ -6,12 +6,18 @@
         <title>Bài 9 29/9/2025</title>
     </head>
     <body>
+        <form action="">
+            <label for="name">Nhập tên:</label>
+            <input type="text" id="name" />
+            <button onclick="sayHello()">Click</button>
+        </form>
         <script>
+            const inputName = document.getElementById("name");
             //Mảng
-            const arr = [];
-            document.writeln(Array.isArray(arr) + "<br>");
+            //    const arr = [];
+            //    document.writeln(Array.isArray(arr) + "<br>");
 
-            document.writeln(arr.length + "<br>");
+            //   document.writeln(arr.length + "<br>");
 
             // indexOf() --> phần tử đầu tiên, nếu không có -> -1
             // lastIndexOf -> phần tử cuối cùng
@@ -26,13 +32,18 @@
 
             // if else
 
-            const str = "10000000000000000000001";
-            const x = BigInt(str);
+            //const str = "10000000000000000000001";
+            //const x = BigInt(str);
 
-            if (x % 2n === 0n) {
-                console.log("Chẵn");
-            } else {
-                console.log("Lẻ");
+            //if (x % 2n === 0n) {
+            //    console.log("Chẵn");
+            // } else {
+            //   console.log("Lẻ");
+            // }
+
+            function sayHello(name) {
+                name = inputName.value;
+                document.writeln("Xin chào " + name);
             }
         </script>
     </body>
