@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Bài 11</title>
+    </head>
+    <body>
+        <!-- <h1>Tính tổng</h1>
+        <div>
+            <label for="number1">Nhập số thứ nhất: </label>
+            <input id="number1" type="text" />
+        </div>
+        <br />
+        <div>
+            <label for="number2">Nhập số thứ hai: </label>
+            <input id="number2" type="text" />
+        </div>
+        <div><button id="btn">Tính tổng</button></div>
+        <div>
+            <span>Kết quả:</span>
+            <input type="text" id="result" readonly />
+        </div> -->
+
+        <h1>Tính điểm chữ</h1>
+        <div>
+            <label for="scoreA">Nhập điểm A: </label>
+            <input id="scoreA" type="text" />
+        </div>
+        <div>
+            <label for="scoreB">Nhập điểm B: </label>
+            <input id="scoreB" type="text" />
+        </div>
+        <div>
+            <label for="scoreC">Nhập điểm C: </label>
+            <input id="scoreC" type="text" />
+        </div>
+        <div><button id="btn">Tính điểm</button></div>
+        <div>
+            <span>Kết quả:</span>
+            <input type="text" id="result" readonly />
+        </div>
+    </body>
+    <script>
+        btn.onclick = () => {
+            const btn = document.getElementById("btn");
+            const result = document.getElementById("result");
+            const scoreA = +document.getElementById("scoreA").value;
+            const scoreB = +document.getElementById("scoreB").value;
+            const scoreC = +document.getElementById("scoreC").value;
+            let warn = "";
+            if (!scoreA) {
+                warn += "Vui lòng nhập điểm A! ";
+            }
+            if (!scoreB) {
+                warn += "Vui lòng nhập điểm B! ";
+            }
+            if (!scoreC) {
+                warn += " Vui lòng nhập điểm C! ";
+            }
+            if (
+                scoreA < 0 ||
+                scoreA > 10 ||
+                scoreB < 0 ||
+                scoreB > 10 ||
+                scoreC < 0 ||
+                scoreC > 10
+            ) {
+                warn +=
+                    "Điểm nhập không hợp lệ (điểm không được âm và không vượt quá 10)!";
+            }
+            if (warn) {
+                alert(warn);
+                return;
+            }
+            const scoreAverage = scoreA * 0.6 + scoreB * 0.3 + scoreC * 0.1;
+
+            if (scoreAverage >= 8) {
+                result.value = "A";
+            } else if (scoreAverage >= 7 && scoreAverage < 8) {
+                result.value = "B";
+            } else if (scoreAverage >= 5 && scoreAverage < 7) {
+                result.value = "C";
+            } else if (scoreAverage >= 4 && scoreAverage < 5) {
+                result.value = "B";
+            } else {
+                result.value = "F";
+            }
+        };
+        /* const number1 = document.getElementById("number1");
+        const number2 = document.getElementById("number2");
+        const result = document.getElementById("result");
+        const btn = document.getElementById("btn");
+        btn.onclick = () => (result.value = +number1.value + +number2.value); */
+    </script>
+</html>

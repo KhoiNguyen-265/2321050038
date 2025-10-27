@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Spotify</title>
+
+        <link rel="stylesheet" href="./signup.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="main">
+                <h1 class="heading1">Đăng nhập vào Spotify</h1>
+                <div class="btn-wrapper">
+                    <button onclick="handleButton('Google')" class="btn">
+                        Tiếp tục bằng Google
+                    </button>
+                </div>
+                <div class="btn-wrapper">
+                    <button onclick="handleButton('Facebook')" class="btn">
+                        Tiếp tục bằng Facebook
+                    </button>
+                </div>
+                <div class="btn-wrapper">
+                    <button onclick="handleButton('Apple')" class="btn">
+                        Tiếp tục bằng Apple
+                    </button>
+                </div>
+                <div class="btn-wrapper">
+                    <button onclick="handleButton('Số điện thoại')" class="btn">
+                        Tiếp tục bằng Số điện thoại
+                    </button>
+                </div>
+
+                <div>
+                    <label for="">Nhập email hoặc tên người dùng</label>
+                    <input
+                        id="email"
+                        type="email"
+                        placeholder="Email hoặc tên người dùng"
+                    />
+                    <button id="continueBtn">Continue</button>
+                </div>
+
+                <div class="bottom">
+                    <p>
+                        Bạn chưa có tài khoản? <a href="#!">Đăng ký Spotify</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <script>
+        const email = document.getElementById("email");
+        const continueBtn = document.getElementById("continueBtn");
+
+        function handleButton(platform) {
+            alert("Đã đăng nhập bằng " + platform);
+        }
+
+        continueBtn.onclick = () => {
+            if (!email.value.trim()) {
+                alert("Please enter email");
+                return;
+            }
+            const password = prompt("Please enter password");
+
+            password === "123"
+                ? alert("Login successful")
+                : alert("The password is incorrect");
+        };
+    </script>
+</html>

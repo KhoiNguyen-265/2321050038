@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .container {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                align-items: center;
+            }
+
+            .dark {
+                color: #fff;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="img-wrapper">
+                <img id="img" style="width: 300px" src="./sun.jfif" alt="sun" />
+            </div>
+            <p class="desc" id="desc">Chế độ sáng</p>
+            <button id="button">Đổi chế độ</button>
+        </div>
+        <script>
+            let lightMode = true;
+            const modeButton = document.getElementById("button");
+            const modeDesc = document.getElementById("desc");
+            const modeImg = document.getElementById("img");
+            modeButton.onclick = () => {
+                if (lightMode) {
+                    document.body.style = "background-color: #000";
+                    modeImg.src = "moon.jpg";
+                    modeDesc.innerText = "Chế độ tối";
+                    modeDesc.classList.toggle("dark");
+                    lightMode = false;
+                } else {
+                    document.body.style = "background-color: #fff";
+                    modeImg.src = "./sun.jfif";
+                    modeDesc.innerText = "Chế độ sáng";
+                    modeDesc.classList.toggle("dark");
+                    lightMode = true;
+                }
+            };
+        </script>
+    </body>
+</html>

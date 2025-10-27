@@ -14,12 +14,24 @@
         </form> -->
 
         <!-- Bài 2 -->
-        <input type="number" name="" id="number1" />
-        <input type="number" name="" id="number2" />
-        <button onclick="addition()">Cộng</button>
-        <button onclick="subtraction()">Trừ</button>
-        <button onclick="multiplication()">Nhân</button>
-        <button onclick="division()">Chia</button>
+        <div>
+            <label for="number1">Số thứ nhất:</label>
+            <input type="number" name="" id="number1" />
+        </div>
+        <div style="margin-top: 8px">
+            <label for="number2">Số thứ hai:</label>
+            <input type="number" name="" id="number2" />
+        </div>
+        <div style="margin: 8px 0">
+            <button onclick="calculation('addition')">Cộng</button>
+            <button onclick="calculation('subtraction')">Trừ</button>
+            <button onclick="calculation('multiplication')">Nhân</button>
+            <button onclick="calculation('division')">Chia</button>
+        </div>
+        <div class="">
+            <label for="result">Kết quả: </label>
+            <input type="text" id="result" readonly />
+        </div>
         <script>
             // Bài 1
             /*
@@ -35,37 +47,30 @@
             */
 
             // Bài 2
-            const number1 = document.getElementById("number1");
-            const number2 = document.getElementById("number2");
-            function addition() {
-                if (!number1.value.trim() || !number2.value.trim()) {
-                    return document.writeln("Please enter value!");
+            const inputNumber1 = document.getElementById("number1");
+            const inputNumber2 = document.getElementById("number2");
+            function calculation(cal) {
+                const number1 = +inputNumber1.value.trim();
+                const number2 = +inputNumber2.value.trim();
+                let result;
+                if (!number1 || !number2) {
+                    return alert("Please enter value");
                 }
-                document.writeln(+number1.value + +number2.value);
-            }
-
-            function subtraction() {
-                if (!number1.value.trim() || !number2.value.trim()) {
-                    return document.writeln("Please enter value!");
+                if (cal === "addition") {
+                    result = number1 + number2;
                 }
-                document.writeln(+number1.value - +number2.value);
-            }
-
-            function multiplication() {
-                if (!number1.value.trim() || !number2.value.trim()) {
-                    return document.writeln("Please enter value!");
+                if (cal === "subtraction") {
+                    result = number1 - number2;
                 }
-                document.writeln(+number1.value * +number2.value);
-            }
-
-            function division() {
-                if (!number1.value.trim() || !number2.value.trim()) {
-                    return document.writeln("Please enter value!");
+                if (cal === "multiplication") {
+                    result = number1 * number2;
                 }
-                if (+number2.value === 0) {
-                    return document.writeln("Cannot divide by 0!");
+                if (cal === "division" && number2) {
+                    result = number1 / number2;
                 }
-                document.writeln(+number1.value / +number2.value);
+                document.getElementById("result").value = result;
+                inputNumber1.value = "";
+                inputNumber2.value = "";
             }
         </script>
     </body>

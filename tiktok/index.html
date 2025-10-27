@@ -146,56 +146,12 @@
             <!-- Main -->
             <main class="main">
                 <div class="content">
-                    <blockquote
-                        class="tiktok-embed"
-                        cite="https://www.tiktok.com/@guria.keria/video/7382975669090716948"
-                        data-video-id="7382975669090716948"
-                        style="max-width: 605px; min-width: 325px"
-                    >
-                        <section>
-                            <a
-                                target="_blank"
-                                title="@guria.keria"
-                                href="https://www.tiktok.com/@guria.keria?refer=embed"
-                                >@guria.keria</a
-                            >
-                            FAKER - HALL OF LEGENDS [ ONLY &#38; ONE - Một cột
-                            mốc mới nữa trong sự nghiệp huy hoàng của cậu, đắng
-                            cay ngọt bùi cậu đều đã trải qua, thành quả này
-                            chính là thứ mà cậu xứng đáng được nhận lấy. Không
-                            phải cậu thì không thể là ai khác - FAKER!]
-                            <a
-                                title="faker"
-                                target="_blank"
-                                href="https://www.tiktok.com/tag/faker?refer=embed"
-                                >#faker</a
-                            >
-                            <a
-                                title="t1"
-                                target="_blank"
-                                href="https://www.tiktok.com/tag/t1?refer=embed"
-                                >#t1</a
-                            >
-                            <a
-                                title="t1win"
-                                target="_blank"
-                                href="https://www.tiktok.com/tag/t1win?refer=embed"
-                                >#t1win</a
-                            >
-                            <a
-                                title="holfakerlmht"
-                                target="_blank"
-                                href="https://www.tiktok.com/tag/holfakerlmht?refer=embed"
-                                >#holfakerlmht</a
-                            >
-                            <a
-                                target="_blank"
-                                title="♬ nhạc nền  - 𝙂𝙐𝙍𝙄𝘼"
-                                href="https://www.tiktok.com/music/nhạc-nền-𝙂𝙐𝙍𝙄𝘼-7382975713638370065?refer=embed"
-                                >♬ nhạc nền - 𝙂𝙐𝙍𝙄𝘼</a
-                            >
-                        </section>
-                    </blockquote>
+                    <div class="video-wrapper">
+                        <video src="./assets/video/video1.mp4" controls></video>
+                        <video src="./assets/video/video2.mp4" controls></video>
+                        <video src="./assets/video/video3.mp4" controls></video>
+                        <video src="./assets/video/video4.mp4" controls></video>
+                    </div>
                     <script
                         async
                         src="https://www.tiktok.com/embed.js"
@@ -240,14 +196,52 @@
                 </div>
 
                 <div class="controls">
-                    <div class="control-wrapper">
+                    <div class="control-wrapper" id="prevBtn">
                         <i class="fa-solid fa-angle-up"></i>
                     </div>
-                    <div class="control-wrapper">
+                    <div class="control-wrapper" id="nextBtn">
                         <i class="fa-solid fa-angle-down"></i>
                     </div>
                 </div>
             </main>
         </div>
+        <script>
+            const prevBtn = document.querySelector("#prevBtn");
+            const nextBtn = document.querySelector("#nextBtn");
+            const videos = document.querySelectorAll(".video-wrapper video");
+
+            let currentIndex = 0;
+
+            videos.forEach((video, index) => {
+                if (index !== 0) {
+                    video.style.display = "none";
+                }
+            });
+
+            function showVideo(index) {
+                videos.forEach((video, i) => {
+                    if (i === index) {
+                        video.style.display = "block";
+                        video.play();
+                    } else {
+                        video.pause();
+                        video.currentTime = 0;
+                        video.style.display = "none";
+                    }
+                });
+            }
+
+            nextBtn.onclick = () => {
+                currentIndex++;
+                if (currentIndex >= videos.length) currentIndex = 0;
+                showVideo(currentIndex);
+            };
+
+            prevBtn.onclick = () => {
+                currentIndex--;
+                if (currentIndex < 0) currentIndex = videos.length - 1;
+                showVideo(currentIndex);
+            };
+        </script>
     </body>
 </html>
