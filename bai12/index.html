@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Bài 12</title>
+        <style>
+            .container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .dark {
+                background-color: #000;
+                color: #fff;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="heading">Ví dụ về change mode</h1>
+            <img class="img" src="" alt="sunMode" />
+            <h2 class="title">Light Mode</h2>
+            <button class="btn" id="btn">Change mode</button>
+        </div>
+        <script>
+            const body = document.body;
+            const btn = document.querySelector("#btn");
+            btn.onclick = () => {
+                body.classList.toggle("dark");
+
+                const isDark = body.classList.contains("dark");
+                if (isDark) {
+                    document.querySelector(".title").textContent = "Dark Mode";
+                } else {
+                    document.querySelector(".title").textContent = "Light Mode";
+                }
+            };
+        </script>
+    </body>
+</html>
